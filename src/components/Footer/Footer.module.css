@@ -1,0 +1,15 @@
+/* src/components/Footer/Footer.module.css */
+.footer {
+  background-color: var(--color-primary);
+  padding: 2rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid #eaeaea;
+}
+
+.content {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--color-text);
+}

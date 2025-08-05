@@ -1,0 +1,58 @@
+/* src/components/Header/Header.module.css */
+
+.header {
+  background-color: var(--color-text);
+  color: var(--color-primary);
+  border-bottom: 1px solid #ddd; /* বর্ডারটি একটু হালকা করা হলো */
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  /* আমরা এখান থেকে padding সরিয়ে দিয়েছি, কারণ উচ্চতা এখন .nav দ্বারা নিয়ন্ত্রিত হবে */
+}
+
+.nav {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* এই লাইনটিই সবকিছুকে উল্লম্বভাবে মাঝখানে আনবে */
+  height: 80px; /* ১. হেডারের মোট উচ্চতা এখানে নির্দিষ্ট করে দিন */
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center; /* ২. লিঙ্কগুলোকেও মাঝখানে আনার জন্য */
+  gap: 2rem; /* লিঙ্কগুলোর মধ্যে দূরত্ব সামান্য বাড়ানো হলো */
+}
+
+.navLinks a {
+  font-weight: 500;
+  font-size: 1rem; /* ফন্টের সাইজ নির্দিষ্ট করা হলো */
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0; /* হোভারের আন্ডারলাইনের জন্য জায়গা তৈরি */
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+.navLinks a:hover {
+  color: var(--color-accent);
+}
+.navLinks a:hover::after {
+  width: 100%;
+}

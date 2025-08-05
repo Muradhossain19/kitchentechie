@@ -1,15 +1,22 @@
+/* src/app/globals.css */
+
+/* 1. Defining Brand Colors as CSS Variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #13233a; /* Deep Navy Blue */
+  --color-accent: #f35d14; /* Bright Orange */
+  --color-text: #ffffff; /* White text for dark backgrounds */
+  --color-text-dark: #333333; /* Dark text for light backgrounds */
+  --color-background-light: #f8f9fa; /* Light gray for backgrounds */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* 2. Basic Reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
+/* 3. Global Font and Background Setup */
 html,
 body {
   max-width: 100vw;
@@ -17,26 +24,12 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  font-family: var(--font-montserrat), sans-serif;
+  background-color: #ffffff; /* Default background for the site */
+  color: var(--color-text-dark);
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
